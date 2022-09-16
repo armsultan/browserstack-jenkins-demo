@@ -16,9 +16,10 @@ different devices, operating systems, and web browser engine combinations.
 
 ## Demo 
 
+```
 Build Trigger GitHub hook trigger for GITScm polling -> Jenkins pipeline -> Build -
 Browserstack automate using Selenium WebDriver and ruby -> Post Action Build - BrowserStack Test Report
-
+```
 ## Test Suite Setup Guide
 
 The suite does the following:
@@ -42,7 +43,7 @@ How to setup - *Todo*
 ![](media/image5.png)
 ![](media/image6.png)
 ![](media/image7.png)
-![](media/image9.png)
+![](media/image10.png)
 
 **Console output in Jenkins**
 
@@ -84,4 +85,4 @@ Done installing documentation for selenium-webdriver after 1 seconds
 Finished: SUCCESS
 ```
 ![](media/image11.png)
-![](media/image10.png)
+![](media/image9.png)
