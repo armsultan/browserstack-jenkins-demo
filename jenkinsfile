@@ -1,0 +1,24 @@
+pipeline {
+   agent any
+   stages {
+    stage('setup') {
+         steps {
+            echo 'Setup..'
+            sh 'ruby --version'
+            sh 'echo $PATH'
+            fileExists 'test.rb'
+         }
+         }
+      stage('test') {
+         steps {
+            echo 'testing..'
+            browserstack(credentialsId: '2bb564a8-5f77-442e-9f4f-f06363833b1d') {
+            sh 'gem install --no-user-install selenium-webdriver -v 4.1.0'
+            sh 'ruby test.rb'
+            }
+            // Enable reporting in Jenkins
+            browserStackReportPublisher 'automate'
+         }
+      }
+    }
+  }
